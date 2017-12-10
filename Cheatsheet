@@ -1,0 +1,3 @@
+pacman -Rs package_name //To remove a package, its dependencies and all the packages that depend on the target package: 
+winecfg //inital setup
+wine the-name-of-the-application.extension //(e.g. wine realplayer_installer.exe)
