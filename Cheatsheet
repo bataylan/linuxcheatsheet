@@ -1,3 +1,4 @@
-pacman -Rs package_name //To remove a package, its dependencies and all the packages that depend on the target package: 
+pacman -Rs package_name //To remove a package, its dependencies and all the packages that depend on the target package
+ sudo dd bs=4M if=input.iso of=/dev/sd<?> conv=fdatasync //mount bootable usb
 winecfg //inital setup
 wine the-name-of-the-application.extension //(e.g. wine realplayer_installer.exe)
