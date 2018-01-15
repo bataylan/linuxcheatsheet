@@ -1,0 +1,276 @@
+22.00
+//First Things to do After Installing Manjaro
+Install Intellij
+Install Arc-Breath-Dark
+Install Icons
+Install Compiz
+Install Bumblebee Components with Arch wiki page(bumblebee, mesa, nouveau driver, lib32-virtualgl, lib32-nvidia-utils)
+Add Steam Games launch command "primusrun %command%"
+
+//pacman tips
+  //update
+    sudo pacman -Syyu //sycn and all system update  
+  //pacman installed but not in use packages
+    pacman -Qqet --> lists all explicitly installed packages
+    pacman -Qqdt --> lists all packages which are orphans
+    pacman -Rns listofpackagesyouwantgone -n means nosave, -s means recursive
+  //pacman installing from tar.gz
+    sudo pacman -S xxx.tar.gz
+    //if it didnt work//
+    tar -xvf gnome-shell-pomodoro.tar.gz && cd gnome-shell-pomodoro
+    makepkg -s
+    makepkg -i
+
+//Wifi Connect
+# iwlist wlp2s0 scanning
+# iwconfig wlp2s0 essid ESSID
+
+# ip link set dev wlp2s0 up
+# wpa_supplicant -B -i wlp2s0 -c /etc/wpa_supplicant/wpa_supplicant.conf
+# dhcpcd wlp2s0
+#ip link set dev wlp2s0 down //close the connection
+
+//LightDM GTK+ Lockscreen
+#background=/usr/share/pixmaps/ex.jpg or .png (picture should be in /usr/share/ folders) //changes background wallpaper
+#/etc/lightdm/lightdm-gtk-greeter.conf
+
+//Start Steam
+#LD_PRELOAD='/usr/$LIB/libstdc++.so.6 /usr/$LIB/libgcc_s.so.1 /usr/$LIB/libxcb.so.1 /usr/$LIB/libgpg-error.so' /usr/bin/steam
+
+//XFCE4
+sudo xfwm4 --replace  //restart XFCE4 window manager
+pkill -KILL -u yourusername   //kill user session
+rm ~/.cache/sessions  //delete XFCE4 sessions cache
+
+//TLP Configuration
+#sudo vim /etc/default/tlp   //Configuration File
+sudo systemctl start tlp
+sudo systemctl enable tlp
+sudo systemctl enable tlp-sleep.service
+sudo systemctl stop tlp
+
+//Change default applications on Manjaro
+sudo vim .config/mimeapps.list
+
+
+//Command Line Basics
+
+username@hostname:current_directory
+pete@icebox:/home/pete $
+
+$ pwd	//print working directory
+
+$ cd	//change directory (only cd go home directory)
+$ cd .	//directory that currently in
+$ cd ..	//go parent directory
+$ cd ~	//defaults home directory
+$ cd -	//previous directory
+
+$ ls	//list directories
+$ ls /home/bt	//list bt directories
+$ ls -a	//see all directories(hidden directories included)
+ 	//(starting with .files are hidden files)
+$ ls -l	//This will show you detailed information, starting from the left:
+ 	//file permissions, number of links, owner name, owner group, file size,
+ 	//timestamp of last modification, and file/directory name.
+$ ls -t	//sort by modification time, newest first
+$ ls -R	//recursively list directory contents
+
+$ touch filename	//create new empty files || change file's timestamp
+
+//In Linux, filenames aren’t required to represent the contents of the file.
+//You can create a file called funny.gif that isn’t actually a GIF.
+$ file banana.jpg	//find what kind of file it is//
+
+//cat is only for short content,not a good way for large files//
+$ cat gofile	//read file
+$ cat dogfile birdfile //combine files and show the output of them
+
+
+//less commands//
+$ less /home/pete/Documents/text1		//display larger files.
+//The text is displayed in a paged manner, so you can navigate through a text file page by page.
+$ q 	//Used to quit out of less and go back to your shell.
+Page up, Page down, Up and Down - Navigate using the arrow keys and page keys.
+$ g 	//Moves to beginning of the text file.
+$ G  	//Moves to the end of the text file.
+$ /search //You can search for specific text inside the text document.
+Prefacing the words you want to search with//
+$ h 	//If you need a little help about how to use less while you’re in less, use help.
+
+
+$ history 	//history of commands
+$ !! 	//run the last command again
+ctrl-R 	// reverse of the search command, start typing parts of the command you want
+ 	//it will show you matches and you can just navigate through them by hitting
+ 	//the ctrl-R key again
+$ clear 	//clear the terminal
+
+$ cp mycoolfile /home/pete/Documents/cooldocs
+$ cp *.jpg /home/pete/Pictures 	//cp with a wildcard, copies all files with .jpg
+//Wildcards
+A wildcard is a character that can be substituted for a pattern based selection,
+giving you more flexibility with searches. You can use wildcards in every command
+for more flexibility.
+
+*  //the wildcard of wildcards, it's used to represent all single characters or
+//any string.
+?  //used to represent one character
+[] //used to represent any character within the brackets
+//
+
+$ cp -r 	//recursively copy the files and directories within a directory.
+$ cp -i 	//One thing to note, if you copy a file over to a directory that has the same
+$ filename, the file will be overwritten with whatever you are copying over.
+This is no bueno if you have a file that you don’t want to get
+accidentally overwritten. You can use the -i flag (interactive) to prompt
+you before overwriting a file. //
+
+
+#move
+$ mv oldfile newfile 	//rename file or directories as well
+$ mv file_1 file_2 /somedirectory 	//move files
+$ mv -i 	//same as cp, prompt before overwriting anything
+$ mv -b directory1 directory2	//mv a file to overwrite the previous one.
+You can also make a backup of that file and it will just rename the old version
+with a ~.//
+
+#create directory
+$ mkdir books paintings 	//create directories
+$ mkdir -p books/hemmingway/favorites 	//create subdirectories at the same time
+
+#remove
+$ rm file1 	//delete file
+$ rmdir directory 	//delete directory
+//write-protected files prompt for confirmation
+$ rm -f	//force option tells rm to remove all files, whether they are write
+protected or not, without prompting the user (as long as you have the appropriate
+permissions).//
+$ rm -i	//i for interactive, prompt
+$ rm -r	//recursively remove  all files and any subdirectories
+without -r, you can't remove directories.//
+
+
+#find
+//find doesn’t stop at the directory you are searching, it will look inside
+any subdirectories that directory may have as well.//
+$ find /home -name puppies.jpg 	//have to specify the directory
+$ find /home -type d -name MyFolder 	//search with type of file (d for directory)
+
+
+#help
+//how to use a command or check what flags are available//
+$ help echo
+$ echo --help
+
+$ man ls //provide a manual for command
+$ whatis cat	//provides a brief description of command line programs.
+
+$ alias foobar='ls -la' 	//create an alias for a command
+ you can type foobar and it will execute that command//
+
+//exit from the shell
+$ exit
+$ logout
+
+
+//Text-Fu//
+	//I/O Streams
+    //Stdout (Standard Out) = 0
+      $ echo Hello World > peanuts.txt  // > operator write Hello World to peanuts.txt file.
+      If it isn't exit, create a file named peanuts.txt If there exist a text already in file,
+      it overwrite.
+
+      $ echo Hello World >> peanuts.txt	// >> operator write Hello World to end of the
+      file. Create file if it isn't exist.
+
+      So, we can turn command line outputs to a file, like
+
+      $ ls -l /var/log > myoutput.txt
+    //Stdin (Standard In) = 1
+      cat < peanuts.txt > banana.txt
+      We know that we have stdin from devices like the keyboard, but we can use files,
+      output from other processes and the terminal
+
+        //Stderr (Standard Error) = 2
+
+      There is actually another I/O stream in play here called standard error (stderr)
+      By default, stderr sends its output to the screen as well, it's a completely
+      different stream than stdout. So you'll need to redirect its output a different way.
+      $ ls /fake/directory 2> peanuts.txt 	//Stdout Stdin and Stderr have
+      file descriptors 0 , 1 , 2
+
+      $ ls /fake/directory > peanuts.txt 2>&1 	//See both 2 and 1, Stdin and Stderr
+      $ ls /fake/directory &> peanuts.txt 	//redirect both stdout and stdin
+      $ ls /fake/directory 2> /dev/null 	//redirect output to a special file
+      call /dev/null and it will discard any input.
+        //pipe  and tea
+      $ ls -la /etc | less    //pipe operator | allows us to get the stdout
+      of a command and make that the stdin to another process.
+      $ ls | tee peanuts.txt  //write the output of my command to two different streams
+    //env (environment)
+        $ env   //environment variables.This outputs a whole lot of information about
+        the environment variables you currently have set. These variables contain useful
+        information that the shell and other processes can use.We can use variables in it
+        with echo s.t. echo USER , echo PATH.
+    //cut and paste
+      $ cut -c 5 sample.txt  //outputs the 5th character in each line of the file
+      $ cut -f 1 -d ";" sample.txt   //The -f or field flag cuts text based off of
+      fields, by default it uses TABs as delimiters, so everything separated by a TAB
+      is considered a field. -d will change the TAB delimiter to a ";" delimiter
+
+      $ paste -s sample2.txt  //merges lines together in a file.default delimeter is
+      TAB.
+      $ paste -d ' ' -s sample2.txt   //-d changes delimeter to space.
+    //head and tail
+  $ head /var/log/syslog  //show first 10 lines
+  $ head -n 15 /var/log/syslog  //-n changes line numbers. show first 15 lines.
+  $ tail /var/log/syslog  //shows last 10 lines of file. -n change line numbers
+  and -f (follow) will follow the as it grows.
+    //expand
+      $ expand sample.txt   //change tabs to spaces
+      $ expand sample.txt > result.txt  //save untabbed version to a file
+      $ expand -a sample.txt  //unexpand command.
+    //soin and split
+      $ join file1.txt file2.txt  //join files
+      $ join -1 2 -2 1 file1.txt file2.txt  //-1 means file1 and -2 means file 2
+      $ split somefile  //split files
+    //sort
+      $ sort file1.txt    //sort a file
+      $ sort -r file1.txt   //sort file with reverse order
+      $ sort -n file1.txt   //sort file with numerical value.
+    //tr (Translate)
+      $ tr a-z A-Z  //tr is tranlate code. this translate all lower cases to upper cases.
+    //Uniq
+      $ uniq reading.txt  //remove duplicates that adjacents
+      $ sort reading.txt | uniq   //sort  without any duplicates
+      $ uniq -c reading.txt   //count duplicates for each line
+      $ uniq -u reading.txt   //get only unique values
+      $ uniq -d reading.txt   //get only duplicated values
+    //wc and nl
+      $ wc /etc/passwd  //wc (word count) command shows the total count of words in a file.
+      It display the number of lines, number of words and number of bytes, respectively.
+      $ wc -l /etc/passwd
+      To just see just the count of a certain field, use the -l, -w, or -c respectively.
+      $ nl file1.txt  //check the number of lines
+    //grep
+      $ grep fox sample.txt   //search files for characters that match a certain pattern.
+      $ grep -i somepattern somefile  //grep patterns that are case insensitive with the -i flag
+      $ env | grep -i User
+      $ ls /somedir | grep '.txt$'  //Should return all files ending with .txt in somedir.
+
+
+      //Advanced Text-Fu//
+//Advanced Text-Fu
+  //regex (Regular Expressions)
+  They are like wildcards, pattern based.
+    //Test Text
+    "sally sells seashells
+    by the seashore"
+
+^by   //match the line "by the seashore"
+seashore$   //match with "by the seashore"
+b.  //match "by"
+d[iou]g   //match "dig" "dog" "dug"
+d[^i]g  //match dug dog, not dig. ^i means except i
+d[a-c]g   //match dag dbg dcg (it is key sensetive)
