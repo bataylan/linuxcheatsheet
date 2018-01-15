@@ -1,11 +1,4 @@
 22.00
-//First Things to do After Installing Manjaro
-Install Intellij
-Install Arc-Breath-Dark
-Install Icons
-Install Compiz
-Install Bumblebee Components with Arch wiki page(bumblebee, mesa, nouveau driver, lib32-virtualgl, lib32-nvidia-utils)
-Add Steam Games launch command "primusrun %command%"
 
 //pacman tips
   //update
