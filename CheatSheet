@@ -14,6 +14,10 @@
     makepkg -s
     makepkg -i
 
+//Burning iso to USB
+ sudo umount /dev/sd<?><?>  
+ sudo dd bs=4M if=input.iso of=/dev/sd<?> conv=fdatasync
+
 //Wifi Connect
 # iwlist wlp2s0 scanning
 # iwconfig wlp2s0 essid ESSID
