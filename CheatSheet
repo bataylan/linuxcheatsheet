@@ -49,6 +49,10 @@ sudo systemctl stop tlp
 //Change default applications on Manjaro
 sudo vim .config/mimeapps.list
 
+//Debian Based
+apt list --installed  	//list of all installed packages
+
+
 
 //Command Line Basics
 
