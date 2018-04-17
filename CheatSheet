@@ -27,6 +27,13 @@
 # dhcpcd wlp2s0
 #ip link set dev wlp2s0 down //close the connection
 
+#Connecting eduroam using nmcli
+nmcli connection add \                                                                                                                                          [1]
+type wifi con-name "eduroam" ifname wlp2s0 ssid "eduroam" -- \
+wifi-sec.key-mgmt wpa-eap 802-1x.eap ttls \
+802-1x.phase2-auth mschapv2 802-1x.identity "barantaylan@std.iyte.edu.tr"
+
+
 //LightDM GTK+ Lockscreen
 #background=/usr/share/pixmaps/ex.jpg or .png (picture should be in /usr/share/ folders) //changes background wallpaper
 #/etc/lightdm/lightdm-gtk-greeter.conf
