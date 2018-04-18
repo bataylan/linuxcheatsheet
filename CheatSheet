@@ -41,6 +41,9 @@ wifi-sec.key-mgmt wpa-eap 802-1x.eap ttls \
 //Start Steam
 #LD_PRELOAD='/usr/$LIB/libstdc++.so.6 /usr/$LIB/libgcc_s.so.1 /usr/$LIB/libxcb.so.1 /usr/$LIB/libgpg-error.so' /usr/bin/steam
 
+#TheLongDark Launch Options Steam
+LD_PRELOAD=~/.local/share/Steam/ubuntu12_32/steam-runtime/amd64/usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0 %command%
+
 //XFCE4
 sudo xfwm4 --replace  //restart XFCE4 window manager
 pkill -KILL -u yourusername   //kill user session
