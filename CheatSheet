@@ -81,7 +81,8 @@ sudo vim .config/mimeapps.list
 apt list --installed  	//list of all installed packages
 apt-cache depends package-name 	//check package dependencies
 
-
+//Connnecting HDMI to Laptop
+xrandr --output HDMI1 --auto
 
 //Command Line Basics
 
