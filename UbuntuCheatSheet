@@ -1,0 +1,2 @@
+//enabling root user
+sudo passwd root
