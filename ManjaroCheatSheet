@@ -98,6 +98,8 @@ apt-cache depends package-name 	//check package dependencies
 
 //Connnecting HDMI to Laptop
 xrandr --output HDMI1 --auto
+xrandr --output HDMI1 --transform 1.10,0,-25,0,1.10,-25,0,0,1 //for my bspwm configuration
+
 
 //Command Line Basics
 
