@@ -19,7 +19,7 @@ killall plasmashell //kill plasma sshell
 kstart5 plasmashell //to restart it
 // or //
 kstart plasmashell #to restart it
-
+VBoxManage setextradata "Win 10" "CustomVideoMode1" "1366x786x32"
 
 
 
@@ -111,7 +111,9 @@ xrandr --output HDMI1 --transform 1.10,0,-25,0,1.10,-25,0,0,1 //for my bspwm con
 
 //VirtualBox
 VBoxManage controlvm "VM_Name" setvideomodehint 1366 768 32  //change resolution for specified VM_Name while it is running
-
+// or //
+VBoxManage setextradata global GUI/MaxGuestResolution any
+VBoxManage setextradata "VM_Name" "CustomVideoMode1" "1366x786x32" //add video mode as 1366x786
 
 //Command Line Basics
 
