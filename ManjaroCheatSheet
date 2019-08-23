@@ -100,6 +100,9 @@ apt-cache depends package-name 	//check package dependencies
 xrandr --output HDMI1 --auto
 xrandr --output HDMI1 --transform 1.10,0,-25,0,1.10,-25,0,0,1 //for my bspwm configuration
 
+//VirtualBox
+VBoxManage controlvm "VM_Name" setvideomodehint 1366 768 32  //change resolution for specified VM_Name while it is running
+
 
 //Command Line Basics
 
