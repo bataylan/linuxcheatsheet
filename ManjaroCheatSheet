@@ -13,6 +13,15 @@
     tar -xvf gnome-shell-pomodoro.tar.gz && cd gnome-shell-pomodoro
     makepkg -s
     makepkg -i
+    
+//KDE Plasma
+killall plasmashell //kill plasma sshell
+kstart5 plasmashell //to restart it
+// or //
+kstart plasmashell #to restart it
+
+
+
 
 //Burning iso to USB
  sudo umount /dev/sd<?><?>  
