@@ -7,6 +7,7 @@
     pacman -Qqet --> lists all explicitly installed packages
     pacman -Qqdt --> lists all packages which are orphans
     pacman -Rns listofpackagesyouwantgone -n means nosave, -s means recursive
+    sudo pacman -R $(pacman -Qtdq) //remove unused packages
   //pacman installing from tar.gz
     sudo pacman -S xxx.tar.gz
     //if it didnt work//
