@@ -2,7 +2,7 @@
 
 //pacman tips
   //update
-    sudo pacman-mirrors --fasttrack && sudo pacman -Syyu
+    sudo pacman-mirrors --fasttrack 20 && sudo pacman -Syyu
     sudo pacman -Syyu //sycn and all system update  
   //pacman installed but not in use packages
     pacman -Qqet --> lists all explicitly installed packages
