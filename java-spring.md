@@ -8,7 +8,7 @@ Path icerisinde belirttigimiz **response** ve **schema** yi asagida components->
 
 api.yaml dosyasindaki tanimlamalar bittikten sonra `mvn clean compile` ile tanimlamamiza gore responselari ve ilgili interface/controller'lar generate ediliyor.
 
-## REST Controller'a ilgili methodun eklenmesi
+## Yeni REST servisinin gelistirilmesi
 
 **Controller** -> Oncelikle controllerimiz generate edilen **api controllerini** `implements` ile kalitlmali. Ardindan api controllerinda generate edilerek olusturulan, operationId kisminda ismini belirttigimiz action'i `@Override` annotation i ile kendi rest controllerimizda yaziyoruz.
 
