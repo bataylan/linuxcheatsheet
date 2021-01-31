@@ -12,6 +12,22 @@ Rebasing local commits `git rebase --interactive HEAD~7`
 
 Linux ve MacOS 'da iki dosya arasındaki farklıları gösterme komutu `diff -u` 
 
+## Projede calisirken genel siralama
+
+`git fetch --all` tum guncellemeleri alma
+
+`git checkout branch_name` kendi branchine gecme
+
+**Degisiklik yaptiktan sonra**
+
+`git status` ile kontrol etme
+
+`git add .` ile olusturulan dosyalari ekleme
+
+`git commit -m "Commit message"` ile yapilan degisiklikleri commitleme
+
+`git push origin branch_name` ile yapilan degisiklikleri Github/Gitlab vb. servise gonderme
+
 ## Git-crypt
 
 Bu tool'un herhangi bir gizli bilgi repository e eklenmeden kullanilmasi gerekiyor, yoksa gizli bilgi bir kez git ile eklendiginde gecmisten hep gozukecektir.
