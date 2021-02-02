@@ -23,7 +23,8 @@ kstart5 plasmashell //to restart it
 kstart plasmashell #to restart it
 VBoxManage setextradata "Win 10" "CustomVideoMode1" "1366x786x32"
 
-
+//Echo cancellation with pulse audio enable
+pactl load-module module-echo-cancel aec_method=webrtc source_name=echocancel sink_name=echocancel1
 
 //Burning iso to USB
  sudo umount /dev/sd<?><?>  
