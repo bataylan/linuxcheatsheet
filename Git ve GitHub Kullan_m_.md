@@ -30,9 +30,13 @@ Linux ve MacOS 'da iki dosya arasındaki farklıları gösterme komutu `diff -u`
 
 ## Merge
 git checkout master
+
 git fetch --all
+
 git merge branch_name --no-commit --no-ff
+
 IntelliJ -> Right Click -> Git -> Solve conflicts
+
 git merge --continue
 
 ## Git-crypt
