@@ -29,15 +29,17 @@ Linux ve MacOS 'da iki dosya arasındaki farklıları gösterme komutu `diff -u`
 `git push origin branch_name` ile yapilan degisiklikleri Github/Gitlab vb. servise gonderme
 
 ## Merge
-git checkout master
+`git checkout master`
 
-git fetch --all
+`git fetch --all`
 
-git merge branch_name --no-commit --no-ff
+`git merge branch_name --no-commit --no-ff`
 
 IntelliJ -> Right Click -> Git -> Solve conflicts
 
-git merge --continue
+`git merge --continue`
+
+`git push origin master`
 
 ## Git-crypt
 
