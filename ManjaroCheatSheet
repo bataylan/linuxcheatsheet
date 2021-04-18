@@ -24,6 +24,7 @@
 	find / -regextype posix-extended -regex ".+\.pac(new|save)" 2> /dev/null
 	//use pacdiff to manage those files
 	pacdiff
+	//!Important, do not replace shadow, passwd and other system files before check with pacdiff files, it may corrupt system
 
     
 //Services
