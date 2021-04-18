@@ -16,6 +16,10 @@
     makepkg -s
     makepkg -i
     
+//Services
+systemctl --user
+systemctl --user status pipewire-pulse.service
+    
 //KDE Plasma
 killall plasmashell //kill plasma sshell
 kstart5 plasmashell //to restart it
