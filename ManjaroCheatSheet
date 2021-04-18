@@ -25,8 +25,18 @@
 	//use pacdiff to manage those files
 	pacdiff
 	//!Important, do not replace shadow, passwd and other system files before check with pacdiff files, it may corrupt system
-
-    
+	
+//Maintanance
+	//Cached packages
+		//How many packages cached by pacman
+		sudo ls /var/cache/pacman/pkg/ | wc -l
+		//Deleting all cached packages (not recommended)
+		sudo pacman -Sc
+		//clean except last 3 versions
+		sudo paccache -r
+		
+		//Deleting cached aur packages
+		yay -Sc --aur
 //Services
 systemctl --user
 systemctl --user status pipewire-pulse.service
