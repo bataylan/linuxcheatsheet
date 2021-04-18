@@ -15,6 +15,16 @@
     tar -xvf gnome-shell-pomodoro.tar.gz && cd gnome-shell-pomodoro
     makepkg -s
     makepkg -i
+  //find new conf files as .pacnew or .pacfiles
+  	//with pacman log
+  	grep --extended-regexp "pac(new|save)" /var/log/pacman.log
+	//conf files on disks
+	find /etc -regextype posix-extended -regex ".+\.pac(new|save)" 2> /dev/null
+  	//entire disk
+	find / -regextype posix-extended -regex ".+\.pac(new|save)" 2> /dev/null
+	//use pacdiff to manage those files
+	pacdiff
+
     
 //Services
 systemctl --user
