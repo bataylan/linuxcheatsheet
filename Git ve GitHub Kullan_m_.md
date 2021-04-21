@@ -41,6 +41,12 @@ IntelliJ -> Right Click -> Git -> Solve conflicts
 
 `git push origin master`
 
+## Submodule ler ile calisma
+
+`git submodule update --init` projeyi clone ladiktan sonra submodule leri cekmek icin kullanilan komut
+
+Submodulelerde pull yapilamiyorsa (head detached oldugu icin) `git checkout main` ile main branchine gecip pull yapilabilir.
+
 ## Git-crypt
 
 Bu tool'un herhangi bir gizli bilgi repository e eklenmeden kullanilmasi gerekiyor, yoksa gizli bilgi bir kez git ile eklendiginde gecmisten hep gozukecektir.
