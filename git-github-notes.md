@@ -6,6 +6,8 @@ Branch degistirme `git checkout branch_name`
 
 Add all files to commit `git add .`
 
+Commit changes `git commit -m "Commit message (Start with Add/Update/Fix/Delete)"`
+
 Push `git push origin branch_name`
 
 Rebasing local commits `git rebase --interactive HEAD~7`
