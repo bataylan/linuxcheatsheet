@@ -41,6 +41,8 @@ IntelliJ -> Right Click -> Git -> Solve conflicts
 
 `git merge --continue`
 
+**Yapilan degisiklikler ile ilgili varsayilan text editorunu acicak, kapattiktan sonra merge islemi tamamlanmis oluyor**
+
 `git push origin master`
 
 ## Submodule ler ile calisma
