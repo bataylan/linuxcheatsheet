@@ -18,7 +18,7 @@ Linux ve MacOS 'da iki dosya arasındaki farklıları gösterme komutu `diff -u`
 
 `git fetch --all` tum guncellemeleri alma
 
-`git checkout branch_name` kendi branchine gecme
+`git checkout branch_name` branch degistirme
 
 **Degisiklik yaptiktan sonra**
 
