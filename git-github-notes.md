@@ -30,6 +30,15 @@ Linux ve MacOS 'da iki dosya arasındaki farklıları gösterme komutu `diff -u`
 
 `git push origin branch_name` ile yapilan degisiklikleri Github/Gitlab vb. servise gonderme
 
+## Stash kullanimi
+
+`git stash` ile yapilan degisiklikler stashlenebilir
+
+`git stash list` ile stashlerin listesini gorme
+
+`git stash apply` ile stashleri changes olarak apply etme veya `git stash apply stash@{STASH_INDEX}` ile belirli bir stash'i apply etme.
+
+
 ## Merge
 `git checkout master`
 
