@@ -58,6 +58,13 @@ IntelliJ -> Right Click -> Git -> Solve conflicts
 
 `git submodule update --init` projeyi clone ladiktan sonra submodule leri cekmek icin kullanilan komut
 
+submodule silmek icin kullanilan komut
+
+```
+git submodule deinit <asubmodule>    
+git rm <asubmodule>
+```
+
 Submodulelerde pull yapilamiyorsa (head detached oldugu icin) `git checkout main` ile main branchine gecip pull yapilabilir.
 
 ## Git-crypt
