@@ -58,6 +58,8 @@ IntelliJ -> Right Click -> Git -> Solve conflicts
 
 `git submodule update --init` projeyi clone ladiktan sonra submodule leri cekmek icin kullanilan komut
 
+`git submodule add <git-url>` submodule'u bulunulan klasore eklemek icin kullanilan komut
+
 submodule silmek icin kullanilan komut
 
 ```
