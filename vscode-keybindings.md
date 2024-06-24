@@ -6,4 +6,8 @@
 
 `Ctrl+K Ctrl+F` -> Format selected text
 
-`Shift + Click` to region -> Fold nested
+`Ctrl+K Ctrl+3` -> Fold until methods
+
+`Ctrl+K Ctrl+ü` -> Unfold current recursive
+
+`Ctrl+K Ctrl+J` -> Unfold all
