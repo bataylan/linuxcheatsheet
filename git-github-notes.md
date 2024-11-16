@@ -69,6 +69,10 @@ git rm <asubmodule>
 
 Submodulelerde pull yapilamiyorsa (head detached oldugu icin) `git checkout main` ile main branchine gecip pull yapilabilir.
 
+## Git amend
+
+`git commit --amend --date=now --no-edit` mevcut commitin tarihini değiştirme
+
 ## Git-crypt
 
 Bu tool'un herhangi bir gizli bilgi repository e eklenmeden kullanilmasi gerekiyor, yoksa gizli bilgi bir kez git ile eklendiginde gecmisten hep gozukecektir.
